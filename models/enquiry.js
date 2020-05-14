@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const enqSchema = new mongoose.Schema({
     enquiryNumber: { type: Number, default: 1 },
     dseName: String,
-    prospectname: String,
+    prospectName: String,
     address: String,
     mobileNumber: String,
     modelName: String,
