@@ -1,11 +1,12 @@
 const express       = require('express')
-      bodyParser    = require('body-parser')
-      userRouter    = require('./routers/user')
-      enqRouter     = require('./routers/enquiry')
-      app           = express()
+const userRouter    = require('./routers/user')
+const enqRouter     = require('./routers/enquiry')
+const app           = express()
 
+require('./mongoose')
 const port = process.env.PORT || 3000
 
+app.set('view engine', 'ejs')
 app.use(userRouter)
 app.use(enqRouter)
 
